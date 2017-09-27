@@ -1,0 +1,13 @@
+.water-bottle {
+  color: pink;
+}
+.list {
+  color: green;
+  font-family: 'Comic Sans MS';
+  border: 1px solid #ccc;
+  background-color:#ccb7b7;
+  padding: 5px 8px;
+}
+.nested-list {
+  color: blue;
+}
