@@ -9,7 +9,7 @@ app.use(express.static('public'));
     res.sendfile('./templates/index.htm')
  });*/
  app.get("/spaceDog", function(req, res) {
-    res.sendfile('./templates/spaceDog.html')
+    res.sendFile(path.join(__dirname, './public', 'spaceDog.html'));
  });
 var port = process.env.PORT || 5000;
 app.listen(port, function() {
