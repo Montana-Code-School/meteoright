@@ -1,3 +1,4 @@
+//https://api.giphy.com/v1/gifs/random?api_key=kTbvJKFeUYfzVYxpPTOI1ZjwsQq6afPZ&tag=meteor&rating=PG-13
 
 var meteorites = [{"fall":"Fell","geolocation":{"type":"Point","coordinates":[6.08333,50.775]},"id":"1","mass":"21","name":"Aachen","nametype":"Valid","recclass":"L5","reclat":"50.775000","reclong":"6.083330","year":"1880-01-01T00:00:00.000"}
 ,{"fall":"Fell","geolocation":{"type":"Point","coordinates":[10.23333,56.18333]},"id":"2","mass":"720","name":"Aarhus","nametype":"Valid","recclass":"H6","reclat":"56.183330","reclong":"10.233330","year":"1951-01-01T00:00:00.000"}
@@ -22,8 +23,8 @@ var meteorites = [{"fall":"Fell","geolocation":{"type":"Point","coordinates":[6.
 //mimicking an API call
 var fetchMeteorites = function(){
 	let a = [];
-	meteorites.forEach(m=>{
-    		a.push(m);
+	meteorites.forEach(m=>{  
+    a.push(m);
   });
   	return a;
 }
@@ -35,8 +36,6 @@ var i = 0;
 
 fetchMeteorites().forEach(m => {
 
-  console.log(m.year);
-
   setTimeout(function () {
 
     var date = new Date(m.year); 
@@ -45,6 +44,13 @@ fetchMeteorites().forEach(m => {
     $(nameElement).append(listitem).fadeIn(50);
   }, 80 * i);
   i++;
+});
+
+
+fetch("https://api.giphy.com/v1/gifs/random?api_key=kTbvJKFeUYfzVYxpPTOI1ZjwsQq6afPZ&tag=meteor&rating=PG-13"
+).then((resp) => resp.json()).then(function(addToHtml) {
+  console.log(addToHtml.data.image_url);
+  $("#meteor-gif").append("<img src='" + addToHtml.data.image_url + "'/>")
 });
 
 var titleElement = document.getElementById('meteorTitle');

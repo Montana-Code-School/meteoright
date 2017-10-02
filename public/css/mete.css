@@ -1,0 +1,20 @@
+.cats{
+  color:goldenrod;
+  font-family: Impact;
+  
+  
+}
+
+.list{
+  color:lightgreen;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background-color: gray;
+  
+}
+
+.nested-list{
+  color:purple;
+}
+
+
+/*'Times New Roman', Times, serif*/
