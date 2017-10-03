@@ -1,20 +1,20 @@
 var waterBottle = {
   color: "green",
-  name:"marks kleen kanteen, he's a fiend"
+  name: "maks klean kanteen, he's a fiend"
 };
 
-/*var hideMeteorites = function (){
-    var element = document.getElementById("barf");
-    element.style.display = "none";
-};*/
+var hideMeteorites = function() {
+  var element = document.getElementById("barf");
+  element.style.visibility = "hidden";
+};
 
-$(document).ready(function(){
 
+$(document).ready(function() {
   $('#barf').css({
-    color:"brown"
+    color: 'red'
   });
-
-  $('#btn').click(function(el){
-    $("#barf").hide();
-  });
+  
+  $('#btn').click(function() {
+    $('#barf').hide();
+  });  
 });

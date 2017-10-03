@@ -25,6 +25,7 @@ var fetchMeteorites = function(){
 	let a = [];
 	meteorites.forEach(m=>{  
     a.push(m);
+
   });
   	return a;
 }
@@ -35,6 +36,7 @@ var i = 0;
 
 
 fetchMeteorites().forEach(m => {
+
 
   setTimeout(function () {
 
