@@ -1,3 +1,16 @@
+.cats{
+  color:goldenrod;
+  font-family: Impact;
+  
+  
+}
+
+.nested-list{
+  color:purple;
+}
+
+
+/*'Times New Roman', Times, serif*/
 .water-bottle {
   color: pink;
 }
